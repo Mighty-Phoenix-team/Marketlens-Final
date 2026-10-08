@@ -1,0 +1,29 @@
+{
+  "version": "2.1-income",
+  "thresholds": {
+    "revenue_growth": 0.1,
+    "earnings_growth": 0.1,
+    "eps_growth": 0.1,
+    "price_change": 0.05,
+    "volume_change": 0.5,
+    "foreign_imbalance": 0.2
+  },
+  "selected_focus_weight": 1.0,
+  "other_focus_weight": 0.4,
+  "matching_sector_factor": 1.0,
+  "other_sector_factor": 0.5,
+  "p0": {
+    "context_level_strength": 0.25,
+    "valuation_gap_threshold": 0.5,
+    "min_history_observations": 2,
+    "quality_change_thresholds": {
+      "roe": 0.02,
+      "roa": 0.005,
+      "net_profit_margin": 0.05,
+      "operating_profit_margin": 0.05
+    }
+  },
+  "income": {
+    "context_level_strength": 0.25
+  }
+}

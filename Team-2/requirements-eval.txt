@@ -1,0 +1,12 @@
+# Used only by .venv-ragas; no change to the existing API/Streamlit environment.
+ragas==0.4.3
+google-genai==2.28.0
+python-dotenv==1.2.4
+# Pin the compatible resolver combination tested with this Ragas release.
+instructor==1.3.2
+openai==1.109.1
+langchain==0.3.30
+langchain-core==0.3.86
+langchain-text-splitters==0.3.11
+langchain-community==0.3.31
+langchain-openai==0.3.35

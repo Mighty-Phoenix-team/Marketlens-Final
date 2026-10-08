@@ -1,0 +1,94 @@
+{
+  "_label": "Simulated data — untuk development frontend saja. WAJIB diganti data Sectors API asli sebelum demo (PRD section 6).",
+
+  "findings": [
+    {
+      "id": "finding-001",
+      "entitySymbol": "BBCA",
+      "entityName": "PT Bank Central Asia Tbk.",
+      "signalGroups": ["fundamental", "market_activity", "investor_flow"],
+      "observation": "Revenue tumbuh dan aktivitas pasar meningkat dalam periode yang diamati, meski arus dana asing bersih negatif.",
+      "evidence": [
+        { "label": "Revenue growth (YoY, quarterly)", "value": "+0.31%" },
+        { "label": "EPS growth (2025)", "value": "+4.93%" },
+        { "label": "30D price change", "value": "+6%" },
+        { "label": "Volume harian", "value": "69,914,100 lembar" },
+        { "label": "Net foreign flow", "value": "-Rp131.3M" }
+      ],
+      "researchRelevance": 8.4,
+      "whyThisAppeared": [
+        "Revenue trend improved",
+        "Market activity increased",
+        "Foreign flow turned negative — perlu diperhatikan sebagai konteks tambahan"
+      ],
+      "reasoningSummary": "Beberapa indikator yang dipantau berubah ke arah yang relevan dengan research focus yang dipilih (Growth + Market Activity). Perubahan foreign flow negatif tidak mengurangi relevansi finding ini karena fokus riset user bukan pada investor flow.",
+      "method": "Multi-Signal Research Radar v0.1 — evidence strength x research-focus relevance x data availability",
+      "source": "https://api.sectors.app/v2/company/report/BBCA/",
+      "retrievedAt": "2026-09-21T10:00:00Z",
+      "limitations": [
+        "Co-movement antar sinyal tidak membuktikan hubungan sebab-akibat.",
+        "Data historis foreign flow hanya tersedia untuk 1 hari observasi terakhir."
+      ]
+    },
+    {
+      "id": "finding-002",
+      "entitySymbol": "BBRI",
+      "entityName": "PT Bank Rakyat Indonesia (Persero) Tbk.",
+      "signalGroups": ["market_activity"],
+      "observation": "Aktivitas pasar meningkat signifikan tanpa perubahan fundamental yang sebanding pada periode yang sama.",
+      "evidence": [
+        { "label": "30D price change", "value": "+9.2%" },
+        { "label": "Volume harian", "value": "Data unavailable" }
+      ],
+      "researchRelevance": 6.1,
+      "whyThisAppeared": [
+        "Market activity meningkat di atas ambang batas yang dipantau"
+      ],
+      "reasoningSummary": "Perubahan harga terdeteksi signifikan untuk research focus Market Activity, namun data volume tidak tersedia untuk periode ini sehingga kekuatan evidence berkurang.",
+      "method": "Multi-Signal Research Radar v0.1 — evidence strength x research-focus relevance x data availability",
+      "source": "https://api.sectors.app/v2/daily/BBRI/",
+      "retrievedAt": "2026-09-21T10:00:00Z",
+      "limitations": [
+        "Data volume harian tidak tersedia dari API untuk periode ini.",
+        "Signal group Fundamental dan Investor Flow tidak dihitung karena data tidak lengkap."
+      ]
+    },
+    {
+      "id": "finding-003",
+      "entitySymbol": "BMRI",
+      "entityName": "PT Bank Mandiri (Persero) Tbk.",
+      "signalGroups": ["fundamental"],
+      "observation": "Pertumbuhan earnings kuartalan melambat dibanding periode sebelumnya.",
+      "evidence": [
+        { "label": "Quarterly earnings growth (YoY)", "value": "-0.14%" },
+        { "label": "EPS growth (2025)", "value": "Data unavailable" }
+      ],
+      "researchRelevance": 3.2,
+      "whyThisAppeared": [
+        "Perubahan fundamental terdeteksi meski arah negatif — tetap relevan untuk dipantau"
+      ],
+      "reasoningSummary": "Earnings growth kuartalan menunjukkan perlambatan. Relevansi terhadap research focus Growth tergolong rendah karena arah perubahan tidak searah dengan fokus riset yang dipilih.",
+      "method": "Multi-Signal Research Radar v0.1 — evidence strength x research-focus relevance x data availability",
+      "source": "https://api.sectors.app/v2/company/report/BMRI/",
+      "retrievedAt": "2026-09-21T10:00:00Z",
+      "limitations": [
+        "EPS growth tahun berjalan belum tersedia dari API pada saat pengambilan data.",
+        "Hanya 1 signal group (Fundamental) yang mendukung finding ini."
+      ]
+    }
+  ],
+
+  "profile_example": {
+    "id": "profile-demo-001",
+    "sectors": ["Financials"],
+    "researchFocus": "Growth + Market Activity",
+    "horizon": "medium",
+    "createdAt": "2026-09-20T08:00:00Z"
+  },
+
+  "saved_assets_example": [
+    { "profileId": "profile-demo-001", "ticker": "BBCA", "savedAt": "2026-09-21T10:05:00Z" },
+    { "profileId": "profile-demo-001", "ticker": "BBRI", "savedAt": "2026-09-21T10:06:00Z" },
+    { "profileId": "profile-demo-001", "ticker": "BMRI", "savedAt": "2026-09-21T10:07:00Z" }
+  ]
+}

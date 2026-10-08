@@ -1,0 +1,10 @@
+{
+  "source_filename": "Pasted markdown(1).md",
+  "source_sha256": "81c0c168426db711d80231adafe6b38c153e79082320cef8abf7f945f6387a4b",
+  "fixture_note": "User-supplied BBCA capture. Only Markdown escaping and non-breaking indentation were repaired to parse JSON; numbers unchanged.",
+  "capture_retrieved_at": "2026-10-01T14:45:07.645465+00:00",
+  "api_calls_during_p0_implementation": 0,
+  "gemini_calls_during_p0_implementation": 0,
+  "methodology_version": "2.0-p0",
+  "contract_version": "1.0"
+}

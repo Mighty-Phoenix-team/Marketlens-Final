@@ -1,0 +1,30 @@
+MarketLens Ragas patch verification
+
+Backend + evaluation: 55 tests passed.
+Dashboard integration: 2 tests passed.
+Total: 57 offline tests passed.
+
+Python 3.12.14; Ragas 0.4.3; Google GenAI 2.28.0.
+Pinned evaluation dependency set passed pip check.
+
+Checks covered:
+- Exact generation request, system prompt and output captured together.
+- Snapshot mismatch rejection and duplicate handling.
+- Explanation cache reuse and deterministic fallback exclusion.
+- Recording errors preserve a successful Gemini answer.
+- Real Ragas Faithfulness and Aspect Critic classes with controlled SDK replies.
+- Faithfulness claim aggregation including unsupported and empty-claim cases.
+- Timeout/rate-limit/budget error handling; missing scores stay unscored.
+- Successful evaluation cache reuse and no implicit retry of rate-limit errors.
+- HTML escaping, CSV output, and excluding error scores from means.
+- Existing backend behavior and both Comparison dashboard flows.
+
+Byte comparisons:
+- SYSTEM_PROMPT rules 1-21 unchanged.
+- Engine, API, schemas, grounding and explanation-service cache unchanged.
+- Existing requirements.txt unchanged.
+- Latest Comparison dashboard patch unchanged.
+
+These tests used simulated provider replies. No Sectors or Gemini API calls
+were made for validation. They verify integration and error handling, not
+the quality of a real Gemini judge. No live evaluation scores are included.

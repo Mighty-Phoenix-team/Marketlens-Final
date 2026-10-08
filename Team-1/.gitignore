@@ -1,0 +1,7 @@
+.env
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+.pytest_cache/
+live_company_report_*.json
